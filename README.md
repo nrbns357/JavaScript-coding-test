@@ -1,20 +1,20 @@
-##Baek_Joon
-백준의 문제들을 javaScript로 푼 코드를 올리는 저장소 입니다.
+#Baek_Joon
+백준의 문제들을 javaScript로 푼 코드를 올리는 저장소 입니다.<br/><br/>
 
-###새로 배운 js함수
+###새로 배운 js함수<br/><br/>
 
 
-##Math.pow()함수
-함수는base^exponent처럼 base 에 exponent를 제곱한 값을 반환합니다.
+##Math.pow()함수<br/>
+함수는base^exponent처럼 base 에 exponent를 제곱한 값을 반환합니다.<br/><br/>
 
-#예시
-Math.pow(base, exponent);
-base : 2,8,10,16 진수를 넣는 곳.
-exponent : 진수들을 제곱하기 위해 사용하는 지수.
+#예시<br/><br/>
+ ```Math.pow(base, exponent); ```<br/>
+base : 2,8,10,16 진수를 넣는 곳.<br/>
+exponent : 진수들을 제곱하기 위해 사용하는 지수. <br/><br/>
 
-#다른 방법 예시
-(base ** exponent)
-** 두개만 적어도 Math.pow의 역할을 한다.
+#다른 방법 예시<br/>
+```(base ** exponent)```<br/>
+** 두개만 적어도 Math.pow의 역할을 한다.<br/><br/>
 
 #다른 방식으로도 쓰이니 궁금하면 찾아 보시길 바랍니다. (다른 방식은 추후에 업로드 예정)
 
