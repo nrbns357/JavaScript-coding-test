@@ -89,7 +89,45 @@ console.log("Hello World!");
 // 16진수 수를 입력받아서 10진수로 출력하는 프로그램을 작성하시오.
 
 // 코드
-// [나중에 풀기]
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  
+  rl.on('line', function(line) {
+    const input = line;
+      let sum=0;
+      const getNumber = (char) => {
+          switch(char){
+              case '0' : return 0;
+              case '1' : return 1;
+              case '2' : return 2;
+              case '3' : return 3;
+              case '4' : return 4;
+              case '5' : return 5;
+              case '6' : return 6;
+              case '7' : return 7;
+              case '8' : return 8;
+              case '9' : return 9;
+              case 'A' : return 10;
+              case 'B' : return 11;
+              case 'C' : return 12;
+              case 'D' : return 13;
+              case 'E' : return 14;
+              case 'F' : return 15;
+              }
+          
+      };
+      for(let i = 0; i < input.length; i++){
+          sum += getNumber(input[i]) * Math.pow(16,input.length-(i+1));
+      }
+    console.log(sum);
+  
+    rl.close();
+  }).on("close", function() {
+    process.exit();
+  });
 
 
 
@@ -105,3 +143,59 @@ var input = fs.readFileSync('/dev/stdin').toString().split('\n');
 var a = parseInt(input[0]);
 var b = parseInt(input[1]); 
 console.log(a+b);
+
+
+
+
+
+// 10월 2일 2752 문제 [세수정렬]
+//{문제}
+//동규는 세수를 하다가 정렬이 하고싶어졌다.
+// 숫자 세 개를 생각한 뒤에, 이를 오름차순으로 정렬하고 싶어 졌다.
+// 숫자 세 개가 주어졌을 때, 가장 작은 수, 그 다음 수, 가장 큰 수를 출력하는 프로그램을 작성하시오.
+
+//코드
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+let sum=0;
+rl.on('line', function(line) {
+    let input = line.split(' ');
+    input[0] = Number(input[0]);
+    input[1] = Number(input[1]);
+    input[2] = Number(input[2]);
+for(let i = 0; i <= 2; i++) {
+    
+    if (input[0] > input[1]) 
+    {
+			sum = input[0]; 
+			input[0] = input[1]; 
+			input[1] = sum; 
+		}
+    else if (input[1] > input[2]) 
+    {
+			sum = input[1];
+			input[1] = input[2];
+			input[2] = sum;
+		}
+	else if(input[0] > input[2])
+    {
+			sum = input[0];
+			input[0] = input[2];
+			input[2] = sum;
+		}
+	}
+	console.log(input[0], input[1], input[2]);
+  rl.close();
+}).on("close", function() {
+  process.exit();
+});
+
+//다른 풀이
+const input = require('fs').readFileSync('/dev/stdin').toString().trim().split(' ').map(Number);
+input.sort((a, b) => a -b);
+console.log(input.join(' '));
