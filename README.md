@@ -126,6 +126,34 @@ console.log(animals.slice(2, -1));
 // expected output: Array ["camel", "duck"]
 ```
   
-음수 인덱스는 배열의 끝에서부터의 길이를 나타냅니다. 
-slice(-2) 는 배열에서 마지막 두 개의 엘리먼트를 추출합니다.  
+음수 인덱스는 배열의 끝에서부터의 길이를 나타냅니다.  
+slice(-2) 는 배열에서 마지막 두 개의 엘리먼트를 추출합니다.<br/><br/>
 
+
+
+**#shift() 함수**  
+shift() 메서드는 배열에서 첫 번째 요소를 제거하고, 제거된 요소를 반환합니다. 이 메서드는 배열의 길이를 변하게 합니다.  
+
+```
+const array1 = [1, 2, 3];
+
+const firstElement = array1.shift(); // 이런 식으로 변수와 같이 함수를 사용한다면 리턴값을 변수에 저장함. 변수를 안 쓴다면 리턴값을 사용할수가 없음.
+
+console.log(array1);
+// expected output: Array [2, 3]
+
+console.log(firstElement);
+// output: 1
+```
+<br/>
+<br/>
+
+**#Array.from() 함수**  
+Array.from() 메서드는 유사 배열 객체나 반복 가능한 객체를 얕게 복사해 새로운Array 객체를 만듭니다.  
+```
+console.log(Array.from('foo'));
+// expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], x => x + x));
+// expected output: Array [2, 4, 6]
+```
