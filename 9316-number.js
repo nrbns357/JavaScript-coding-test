@@ -5,22 +5,20 @@
 // 를 출력하는 프로그램을 만들라. 여기서 i는 줄의 번호이다.
 
 //코드
-const readline = require('readline');
+const readline = require("readline");
 
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
 });
 
-rl.on('line', function(line) {
+rl.on("line", function (line) {
   const input = line;
-    for(let i=1; i <= input; i++){
-        console.log(`Hello World, Judge ${i}!`);
-    }
-
-  
+  for (let i = 1; i <= input; i++) {
+    console.log(`Hello World, Judge ${i}!`);
+  }
 
   rl.close();
-}).on("close", function() {
+}).on("close", function () {
   process.exit();
 });
