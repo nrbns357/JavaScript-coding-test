@@ -4,6 +4,7 @@
 // "Hello World, Judge i!"
 // 를 출력하는 프로그램을 만들라. 여기서 i는 줄의 번호이다.
 
+//코드
 const readline = require('readline');
 
 const rl = readline.createInterface({

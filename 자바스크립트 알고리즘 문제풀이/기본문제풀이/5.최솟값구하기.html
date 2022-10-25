@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>출력 결과</title>
+  </head>
+  <body>
+    <div style="font-size: 100px">
+      결과:
+      <span id="result" />
+    </div>
+    <script>
+      const result = document.getElementById("result");
+
+      function solution(arr) {
+        let answer,
+          min = Number.MAX_SAFE_INTEGER;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] < min) {
+            min = arr[i];
+          }
+        }
+        answer = min;
+
+        return answer;
+      }
+
+      let arr = [5, 7, 1, 3, 2, 9, 11];
+      result.innerHTML = solution(arr);
+    </script>
+  </body>
+</html>
