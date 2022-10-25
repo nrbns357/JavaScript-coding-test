@@ -1,4 +1,4 @@
-# Baek_Joon
+# JavaScript Coding Test
 
 
 **새로 배운 js함수**<br/><br/>
